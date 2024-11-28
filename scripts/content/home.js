@@ -17,16 +17,19 @@ function homeFunction() {
   
     let elements = [
       '<h3>Welcome to Lasha`s Web Development Home page</h3>',
-      '<p>Web development involves creating websites and web applications. It encompasses various technologies and techniques.</p>',
+      '<p>Web development involves creating websites and web applications. It encompasses various technologies and techniques. I use some of them listed here:</p>',
       '<ul>',
-      '<li style="color: #ffcc00;">HTML (HyperText Markup Language)</li>',
-      '<li style="color: #00ccff;">CSS (Cascading Style Sheets)</li>',
-      '<li style="color: #ff6666;">JS (JavaScript)</li>',
-      '<li style="color: #ff99cc;">MySQL (Structured Query Language)</li>',
-      '<li style="color: #66cc66;">PHP (Hypertext Preprocessor)</li>',
-      '<li style="color: #ff9933;">jQuery (JavaScript library)</li>',
+      '<li style="color: #87d75b;">HTML </li>',
+      '<li style="color: #87d75b;">CSS </li>',
+      '<li style="color: #87d75b;">Tailwind CSS</li>',
+      '<li style="color: #87d75b;">Blade </li>',
+      '<li style="color: #ff9933;">JS </li>',
+      '<li style="color: #ff9933;">jQuery </li>',
+      '<li style="color: #fc3131;">MySQL </li>',
+      '<li style="color: #fc3131;">PHP </li>',
+      '<li style="color: #fc3131;">Laravel </li>',
       '</ul>',
-      '<p>These technologies allows me to create dynamic and interactive web experiences.</p>'
+      '<p>These technologies allow me to create custom solutions.</p>'
     ];
   
     function createAndAppendElementWithDelay(htmlString, parentElement, delay) {

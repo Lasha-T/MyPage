@@ -9,7 +9,7 @@ function aboutFunction() {
   let nameText = document.createElement('h3');
   nameText.innerText = 'LASHA TVAURI';
   let welcomeSpan = document.createElement('span');
-  welcomeSpan.innerText = 'I`m a beginner full stack web developer';
+  welcomeSpan.innerText = 'Focused on web applications development';
   welcomeDiv.appendChild(welcomeParagraph);
   welcomeDiv.appendChild(nameText);
   welcomeDiv.appendChild(welcomeSpan);
@@ -24,7 +24,8 @@ function aboutFunction() {
   contentContainer.appendChild(welcomeDiv);
   contentContainer.appendChild(paragraphContainer);
 
-  animateTyping(paragraph, paragraphContainer,"I started learning web development in my free time. First I got acquainted with Html and Css, then with Javascript. I'm also learning Mysql and Php because I started using them in my projects.");
+  animateTyping(paragraph, paragraphContainer,
+    "I have developed my own solution for a trading management system, including purchases, sales and stock management. Also starting to plan other projects for specific tasks and needs.");
 }  
 
 function animateTyping(paragraph, container, text) {

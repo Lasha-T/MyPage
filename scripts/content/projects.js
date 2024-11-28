@@ -5,25 +5,34 @@ function projectsFunction() {
     // Clear the content container
     contentContainer.innerHTML = '';
     
-    let projectsTitle = document.createElement('div');
-    projectsTitle.id = 'projects-title';
-    projectsTitle.innerHTML = '<p>Lasha`s Inventory Management System application projects for desktop browsers</p>';
-    projectsTitle.style.animation = 'rollout 0.5s ease forwards';
-    contentContainer.appendChild(projectsTitle);
+    let topLine = document.createElement('div');
+    topLine.id = 'top-line';
+    topLine.innerHTML = '<p><span> Lasha`s Inventory Management System</span> web application projects</p>';
+    topLine.style.animation = 'rollout 0.5s ease forwards';
+    contentContainer.appendChild(topLine);
 
     // Define an array of objects containing the content for each project
     let projectContent = [
         {
         title: 'LimsJQ',
-        description: 'First version of the project with the most functionality.',
+        description: 'First version of the project with the expanded functionality.',
         used: 'HTML, CSS, JavaScript, MySQL, PHP, jQuery, DataTables',
-        url: 'https://www.youtube.com/watch?v=0p0k7pchORc'
+        preview: 'https://www.youtube.com/watch?v=0p0k7pchORc'
         },
         {
         title: 'LimsBV',
         description: 'Second version of the project with base functionality and different approach.',
         used: 'HTML, CSS, JavaScript, MySQL, PHP',
-        url: 'http://limsbv.infinityfreeapp.com/'
+        url: 'http://limsbv.infinityfreeapp.com/',
+        github: 'https://github.com/Lasha-T/Lims-bv'
+        },
+        {
+        title: 'LimsLV',
+        description: 'Third version of the project with optimized functionality.',
+        used: 'HTML, Blade, Tailwind CSS, JS, MySQL, PHP, Laravel',
+        preview: 'https://www.youtube.com/watch?v=4BCfq4iqCDM',
+        url: 'https://limslv.infinityfreeapp.com/',
+        github: 'https://github.com/Lasha-T/LimsLv'
         }
     ];
 
@@ -40,7 +49,12 @@ function projectsFunction() {
 
         // Create anchor tag with href attribute set to the project URL
         let anchorTag = document.createElement('a');
-        anchorTag.href = projectContent[i].url;
+        if(projectContent[i].url){
+            anchorTag.classList.add('project-title1');
+            anchorTag.href = projectContent[i].url;
+        }else{
+            anchorTag.classList.add('project-title2');
+        }
         anchorTag.target = '_blank'; // Open link in new tab
         anchorTag.textContent = projectContent[i].title;
 
@@ -56,7 +70,23 @@ function projectsFunction() {
         let usedTechnologiesParagraph = document.createElement('p');
         usedTechnologiesParagraph.classList.add('usedT');
         usedTechnologiesParagraph.innerHTML = `<span class="used-prefix">Used: </span>${projectContent[i].used}`;
-        projectDiv.appendChild(usedTechnologiesParagraph);        
+        projectDiv.appendChild(usedTechnologiesParagraph);
+        
+        // Add preview link
+        if(projectContent[i].preview){
+            let previewText = document.createElement('p');
+            previewText.innerHTML = `<span class="used-prefix">Preview: </span><a href="${projectContent[i].preview}" target="_blank" class="previewTag">Video</a>`;
+            projectDiv.appendChild(previewText);
+        }
+
+        // Add github link
+        if(projectContent[i].github){
+            let githubLink = document.createElement('p');
+            githubLink.innerHTML = `<span class="used-prefix">Github: </span><a href="${projectContent[i].github}" target="_blank" class="githubTag">Project</a>`;
+            projectDiv.appendChild(githubLink);
+        }
+        
+
 
         projectsDivWrapper.appendChild(projectDiv);
     }
