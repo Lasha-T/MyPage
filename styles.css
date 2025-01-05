@@ -271,7 +271,7 @@ canvas {
   /* justify-content: space-between; */
 }
 
-#top-line {
+.top-line {
   text-align: center;
   margin: 4em 25%;
   background-color: rgba(51, 51, 51, 0.7); 
@@ -282,10 +282,13 @@ canvas {
   margin-bottom: 1em;
   border-radius: 0.625em; 
 }
-#top-line span{
+.top-line span{
   font-size: 1.2em;
   font-weight: bold;
   color: rgba(218, 251, 176, 0.889);
+}
+.line2 {
+  margin-top: 24rem;
 }
 
 .usedT {
@@ -317,7 +320,10 @@ canvas {
   border-radius: 0.625em; 
   color: #fff;
 }
-
+.project-div2 {
+  margin-top: 27em;
+  margin-left: -84%;
+}
 .githubTag {
   color: rgb(172, 117, 255);
   text-decoration: none;

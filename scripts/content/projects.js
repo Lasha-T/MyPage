@@ -6,13 +6,13 @@ function projectsFunction() {
     contentContainer.innerHTML = '';
     
     let topLine = document.createElement('div');
-    topLine.id = 'top-line';
+    topLine.classList.add('top-line');
     topLine.innerHTML = '<p><span> Lasha`s Inventory Management System</span> web application projects</p>';
     topLine.style.animation = 'rollout 0.5s ease forwards';
     contentContainer.appendChild(topLine);
 
     // Define an array of objects containing the content for each project
-    let projectContent = [
+    let projectContent1 = [
         {
         title: 'LimsJQ',
         description: 'First version of the project with the expanded functionality.',
@@ -36,15 +36,29 @@ function projectsFunction() {
         }
     ];
 
+    let projectContent2 = [
+        {
+        title: 'Photography',
+        description: 'Dimitri Meliqidze Photography personal website',
+        used: 'HTML, CSS, JS, PHP',
+        url: 'https://dimitri-meliqidze.my-style.in'
+        }
+    ];
+
+    
     // Create projects div wrapper
     let projectsDivWrapper = document.createElement('div');
     projectsDivWrapper.id = 'projects-div-wrapper';
     projectsDivWrapper.classList.add('slide-up'); // Add class for slide-up animation
-
+    
+    function createPrDivs(projectContent){
     // Create and append project divs inside the projects div wrapper
     for (let i = 0; i < projectContent.length; i++) {
         let projectDiv = document.createElement('div');
         projectDiv.classList.add('project-div');
+        if(projectContent.length <= 1){
+            projectDiv.classList.add('project-div2');
+        }
         projectDiv.id = `project-${i + 1}`; // Assign unique ID to each project div
 
         // Create anchor tag with href attribute set to the project URL
@@ -90,9 +104,19 @@ function projectsFunction() {
 
         projectsDivWrapper.appendChild(projectDiv);
     }
-
     // Append the projects div wrapper to the content container
     contentContainer.appendChild(projectsDivWrapper);
+}
+
+createPrDivs(projectContent1);
     
-  }
+    let topLine2 = document.createElement('div');
+    topLine2.classList.add('top-line', 'line2');
+    topLine2.innerHTML = '<p><span> Personal</span> web site projects</p>';
+    topLine2.style.animation = 'rollout 0.5s ease forwards';
+    contentContainer.appendChild(topLine2);
+
+createPrDivs(projectContent2);
+
+}
   
