@@ -24,7 +24,7 @@ function projectsFunction() {
         description: 'Second version of the project with base functionality and different approach.',
         used: 'HTML, CSS, JavaScript, MySQL, PHP',
         url: 'http://limsbv.infinityfreeapp.com/',
-        github: 'https://github.com/Lasha-T/Lims-bv'
+        github: 'https://github.com/Lasha-Tvauri/Lims-bv'
         },
         {
         title: 'LimsLV',
@@ -32,7 +32,7 @@ function projectsFunction() {
         used: 'HTML, Blade, Tailwind CSS, JS, MySQL, PHP, Laravel',
         preview: 'https://www.youtube.com/watch?v=4BCfq4iqCDM',
         url: 'https://limslv.infinityfreeapp.com/',
-        github: 'https://github.com/Lasha-T/LimsLv'
+        github: 'https://github.com/Lasha-Tvauri/LimsLv'
         }
     ];
 
