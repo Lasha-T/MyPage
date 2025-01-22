@@ -8,7 +8,7 @@ function projectsFunction() {
     // Array of lines as raw HTML strings
     let titles = [
         '<p><span> Lasha`s Inventory Management System</span> web application projects</p>',
-        '<p><span> Personal</span> web site projects</p>'
+        '<p><span> Personalized</span> web site projects</p>'
     ];
 
     // Function to create and append a topLine element
@@ -84,6 +84,7 @@ function projectsFunction() {
         // Add description to project div
         let descriptionParagraph = document.createElement('p');
         descriptionParagraph.textContent = projectContent[i].description;
+        descriptionParagraph.classList.add('p_desc');
         projectDiv.appendChild(descriptionParagraph);
 
         // Add technologies used to project div
