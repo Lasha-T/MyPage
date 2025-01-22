@@ -130,10 +130,15 @@ canvas {
   overflow-y: scroll; /* Keeps scroll functionality */
   scrollbar-width: none; /* Hides scrollbar in Firefox */
   -ms-overflow-style: none; /* Hides scrollbar in IE/Edge */
+  padding-bottom:  10em; /* Adds space after content */
 }
 
 #content-container::-webkit-scrollbar {
   display: none; /* Hides scrollbar in Chrome, Safari, and Edge */
+}
+
+#content-container > :last-child {
+  margin-bottom: 12em; /* Adds space below the last element */
 }
 
 #content-wrapper {
@@ -264,19 +269,18 @@ canvas {
   color: rgba(255, 244, 119, 0.7);
 }
 
-#projects-div-wrapper {
+.projects-div-wrapper {
   background: none;
-  padding: 2em;
-  margin-top: 1em;
+  /* padding: 2em; */
+  margin-top: -3.5em;
+  margin-bottom: 5em;
   border-radius: 1em;
-  position: absolute;
+  position: relative; 
   left: 50%;
   bottom: -100%;
   transform: translateX(-45%);
   width: 60%;
   display: flex;
-  /* flex-wrap: wrap; */
-  /* justify-content: space-between; */
 }
 
 .top-line {
@@ -294,9 +298,6 @@ canvas {
   font-size: 1.2em;
   font-weight: bold;
   color: rgba(218, 251, 176, 0.889);
-}
-.line2 {
-  margin-top: 19em;
 }
 
 .usedT {
@@ -328,10 +329,7 @@ canvas {
   border-radius: 0.625em; 
   color: #fff;
 }
-.project-div2 {
-  margin-top: 22em;
-  margin-left: -84%;
-}
+
 .githubTag {
   color: rgb(172, 117, 255);
   text-decoration: none;

@@ -5,11 +5,20 @@ function projectsFunction() {
     // Clear the content container
     contentContainer.innerHTML = '';
     
-    let topLine = document.createElement('div');
-    topLine.classList.add('top-line');
-    topLine.innerHTML = '<p><span> Lasha`s Inventory Management System</span> web application projects</p>';
-    topLine.style.animation = 'rollout 0.5s ease forwards';
-    contentContainer.appendChild(topLine);
+    // Array of lines as raw HTML strings
+    let titles = [
+        '<p><span> Lasha`s Inventory Management System</span> web application projects</p>',
+        '<p><span> Personal</span> web site projects</p>'
+    ];
+
+    // Function to create and append a topLine element
+    function createTitle(title) {
+        let topLine = document.createElement('div');
+        topLine.classList.add('top-line');
+        topLine.innerHTML = title; // Use the raw HTML string
+        topLine.style.animation = 'rollout 0.5s ease forwards';
+        contentContainer.appendChild(topLine);
+    }
 
     // Define an array of objects containing the content for each project
     let projectContent1 = [
@@ -46,20 +55,17 @@ function projectsFunction() {
     ];
 
     
+    function createPrDivs(projectContent){
     // Create projects div wrapper
     let projectsDivWrapper = document.createElement('div');
-    projectsDivWrapper.id = 'projects-div-wrapper';
-    projectsDivWrapper.classList.add('slide-up'); // Add class for slide-up animation
-    
-    function createPrDivs(projectContent){
+    // projectsDivWrapper.id = 'projects-div-wrapper';
+    projectsDivWrapper.classList.add('slide-up', 'projects-div-wrapper'); // Add class for slide-up animation    
     // Create and append project divs inside the projects div wrapper
     for (let i = 0; i < projectContent.length; i++) {
         let projectDiv = document.createElement('div');
         projectDiv.classList.add('project-div');
-        if(projectContent.length <= 1){
-            projectDiv.classList.add('project-div2');
-        }
-        projectDiv.id = `project-${i + 1}`; // Assign unique ID to each project div
+        // Assign unique ID to each project div
+        // projectDiv.id = `project-${i + 1}`; 
 
         // Create anchor tag with href attribute set to the project URL
         let anchorTag = document.createElement('a');
@@ -108,15 +114,14 @@ function projectsFunction() {
     contentContainer.appendChild(projectsDivWrapper);
 }
 
+createTitle(titles[0]);
+
 createPrDivs(projectContent1);
-    
-    let topLine2 = document.createElement('div');
-    topLine2.classList.add('top-line', 'line2');
-    topLine2.innerHTML = '<p><span> Personal</span> web site projects</p>';
-    topLine2.style.animation = 'rollout 0.5s ease forwards';
-    contentContainer.appendChild(topLine2);
+
+createTitle(titles[1]);
 
 createPrDivs(projectContent2);
+
 
 }
   
